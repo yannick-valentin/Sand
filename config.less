@@ -1,0 +1,71 @@
+/*----------------------------------------*/
+/* La config                              */ 
+/*----------------------------------------*/
+
+
+// Variables utilisateur
+@images_directory_uri: 	'/images/';
+
+
+// Couleurs
+@couleur1:			#EB0000;
+
+
+// Grille
+@grid_max_width: 		980px;
+@grid_outer_padding: 	15px;
+@grid_gutter_width: 	30px;
+
+// Media queries breakpoint
+@x-small-screen: 		0px;   // < iPhone paysage
+@small-screen: 			320px; // < iPhone portrait
+@mid-small-screen: 		480px; // < iPad portrait
+@medium-screen: 		768px; // < iPad paysage / small desktop
+@mid-medium-screen: 	1024px; // < desktop
+@large-screen: 			1280px; // < large desktop
+@x-large-screen: 		1350px; // < extra large desktop
+
+@x-small: 				~"only screen and (min-width: @{x-small-screen})";
+@small: 				~"only screen and (min-width: @{small-screen})";
+@mid-small: 			~"only screen and (min-width: @{mid-small-screen})";
+@medium: 				~"only screen and (min-width: @{medium-screen})";
+@mid-medium: 			~"only screen and (min-width: @{mid-medium-screen})";
+@large: 				~"only screen and (min-width: @{large-screen})";
+@x-large: 				~"only screen and (min-width: @{x-large-screen})";
+
+@landscape: 			~"only screen and (orientation: landscape)";
+@portrait: 				~"only screen and (orientation: portrait)";
+
+
+@retina: 				~"only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-resolution: 200dpi)";
+
+
+// Body
+@body_font_family: 		Helvetica, Arial, sans-serif;
+@body_font_size: 		16; //px
+@body_line_height: 		1.4;
+@body_font_color:		#333333;
+@body_bg_color:			#FFFFFF;
+
+
+
+// Typographie
+@headings_font_family: 	Helvetica, Arial, sans-serif;
+@headings_font_weight: 	700;
+@headings_line_height:	normal;
+@heading_margin:		1.5em 0 0.5em;
+
+@h1_font_size:			35; //px
+@h2_font_size:			26; //px
+@h3_font_size:			20; //px
+@h4_font_size:			18; //px
+@h5_font_size:			16; //px
+@h6_font_size:			14; //px
+
+@heading_reduc_factor: 		0.8;
+@heading_reduc_breakpoint: 	@medium;
+
+
+
+// Images
+@images_margin: 		1em;

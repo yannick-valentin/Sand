@@ -1,0 +1,73 @@
+/*----------------------------------------*/
+/* Les mixins                             */ 
+/*----------------------------------------*/
+
+// Converti les px en em
+.font-size( @value: @body_font_size, @context: @body_font_size ) {
+	font-size: (@value / @context) + 0em;
+}
+
+
+// box-shadow
+.box-shadow (@arguments) {
+	-webkit-box-shadow: @arguments;
+	   -moz-box-shadow: @arguments;
+	     -o-box-shadow: @arguments;
+	        box-shadow: @arguments;
+}
+
+	.nobox-shadow() {
+		-webkit-box-shadow: none !important;
+		   -moz-box-shadow: none !important;
+		     -o-box-shadow: none !important;
+		        box-shadow: none !important;
+	}
+
+// Text-shadow
+.text-shadow (@arguments) {
+	-webkit-text-shadow: @arguments;
+	   -moz-text-shadow: @arguments;
+	     -o-text-shadow: @arguments;
+	        text-shadow: @arguments;
+}
+
+	.notext-shadow() {
+		-webkit-text-shadow: none !important;
+		   -moz-text-shadow: none !important;
+		     -o-text-shadow: none !important;
+		        text-shadow: none !important;
+	}
+
+// border-radius
+.rounded(@radius: 2px) {
+	-webkit-border-radius: @radius;
+	   -moz-border-radius: @radius;
+	     -o-border-radius: @radius;
+	        border-radius: @radius;
+ }
+
+
+// opacity
+.opacity(@alpha: 0.5) {
+	-webkit-opacity: @alpha;
+	 -khtml-opacity: @alpha;
+	   -moz-opacity: @alpha;
+	        opacity: @alpha;
+	@alphaie :@alpha * 100;
+	filter: ~"alpha(opacity = @{alphaie})";
+}
+
+// Transition
+.transition(@property:all, @duration:ease, @ease:200ms) {
+	-webkit-transition: @property @duration @ease;
+	   -moz-transition: @property @duration @ease;
+	     -o-transition: @property @duration @ease;
+	        transition: @property @duration @ease;
+}
+
+	.notransition() {
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		     -o-transition: none !important;
+		        transition: none !important;
+	}

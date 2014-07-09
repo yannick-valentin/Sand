@@ -1,0 +1,37 @@
+/*----------------------------------------*/
+/* SAND.LESS
+/* Ce fichier appelle tous les autres
+
+
+	style / 
+		utils / 
+			-- print.less			
+		-- base.less
+
+	_parts /
+		-- classes.less
+		-- smart-grid.less
+		-- mixins.less
+		-- normalize.less
+
+	-- config.less
+	-- sand.less
+
+/*----------------------------------------*/
+
+// Config
+@import 'config.less';
+
+// Add-ons
+@import 'parts/normalize.less'; // Reset
+@import 'parts/mixins.less'; // Mixins
+@import 'parts/classes.less'; // Classes
+@import 'parts/the-grid.less'; // Grille
+
+
+// Style utilisateur
+@import '_style/base.less';
+@import '_style/modules/header.less';
+
+// Print
+@import '_style/utils/print.less';
