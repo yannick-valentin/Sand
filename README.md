@@ -13,9 +13,10 @@ Sand est un framework LESS ultra simple. Il se compose :
 Liens utiles 
 ----------------
 
-[An Introduction To Object Oriented CSS (OOCSS)] (http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/)  
-[LessPHP] (http://leafo.net/lessphp/)
+- <a href="http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/" target="_blank">An Introduction To Object Oriented CSS (OOCSS)</a>
+- <a href="http://leafo.net/lessphp/" target="_blank">LessPHP</a>
   
   
+---------------------------
   
-[Yannick Valentin] (http://yvalentin.com/)
+<a href="http://yvalentin.com/" target="_blank">Yannick Valentin</a>
