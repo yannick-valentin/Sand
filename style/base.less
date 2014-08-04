@@ -18,24 +18,18 @@ body {
 
 a {
 	text-decoration: none;
-	color:@primary_color;
-	border-bottom: 1px solid @primary_color;
+	color:@color;
+	border-bottom: 1px solid @color;
 
 	&:visited {
-		color:darken(@primary_color, 10%);
-		border-bottom-color: darken(@primary_color, 10%);
+		color:darken(@color, 10%);
+		border-bottom-color: darken(@color, 10%);
 	}
 	
 	&:hover {
-		color:darken(@primary_color, 10%);
-		border-bottom-color: darken(@primary_color, 10%);
+		color:darken(@color, 10%);
+		border-bottom-color: darken(@color, 10%);
 	}
-
-	&:active {
-		position: relative;
-		top: 1px;
-	}
-
 }
 
 h1, h2, h3, h4, h5, h6 {
