@@ -1,28 +1,30 @@
-/*----------------------------------------*/
-/* SAND.LESS
-/* Ce fichier appelle tous les autres
 
+//  MIXINS                             
+//  —————————————————————————————————————————————
+/*  
+    SAND.LESS
+    Ce fichier appelle tous les autres
+
+	lib /
+		— classes.less
+		— smart-grid.less
+		— mixins.less
+		— normalize.less
 
 	style / 
 		utils / 
-			-- print.less			
-		-- base.less
+			— print.less			
+		— base.less
 
-	_parts /
-		-- classes.less
-		-- smart-grid.less
-		-- mixins.less
-		-- normalize.less
-
-	-- config.less
-	-- sand.less
-
-/*----------------------------------------*/
+	— config.less
+	— sand.less
+*/
+//  —————————————————————————————————————————————
 
 // Config
 @import 'config.less';
 
-// Add-ons
+// Lib
 @import 'lib/normalize.less'; // Reset
 @import 'lib/mixins.less'; // Mixins
 @import 'lib/classes.less'; // Classes

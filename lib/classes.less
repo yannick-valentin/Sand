@@ -1,6 +1,6 @@
-/*----------------------------------------*/
-/* Les classes                            */ 
-/*----------------------------------------*/
+
+//  CLASSES                             
+//  —————————————————————————————————————————————
 
 // Accessibilité
 .screen-reader-text {
@@ -33,10 +33,12 @@
 .fleft 	{ float: left }
 .fright { float: right }
 .cb 	{ clear: both }
+
+// Micro-clearfix  -  © http://nicolasgallagher.com/micro-clearfix-hack/
 .cf:before,
 .cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    display: table;
 }
 .cf:after { clear: both }
 
@@ -45,6 +47,11 @@
 .tal { text-align: left }
 .tac { text-align: center }
 .tar { text-align: right }
+
+
+// Text-transform
+.ttu { text-transform: uppercase }
+.ttn { text-transform: none }
 
 
 // Taille de texte
@@ -84,6 +91,7 @@
 // Display
 .hidden { display: none }
 .dib 	{ display: inline-block }
+.block  { display: block }
 
 
 // Overflow
@@ -102,71 +110,71 @@
 // Margin / Padding 
 .mxw100 { max-width: 100% }
 
-.m0 { margin: 0 }
-.m10 { margin: 10px }
-.m20 { margin: 20px }
-.m30 { margin: 30px }
-.m40 { margin: 40px }
-.m50 { margin: 50px }
-.m60 { margin: 60px }
-.m70 { margin: 70px }
-.m80 { margin: 80px }
-.m90 { margin: 90px }
-.m100 { margin: 100px }
+.m0    { margin: 0 }
+.m10   { margin: 10px }
+.m20   { margin: 20px }
+.m30   { margin: 30px }
+.m40   { margin: 40px }
+.m50   { margin: 50px }
+.m60   { margin: 60px }
+.m70   { margin: 70px }
+.m80   { margin: 80px }
+.m90   { margin: 90px }
+.m100  { margin: 100px }
 
-.m10p { margin: 10% }
-.m20p { margin: 20% }
-.m30p { margin: 30% }
-.m40p { margin: 40% }
-.m50p { margin: 50% }
-.m60p { margin: 60% }
-.m70p { margin: 70% }
-.m80p { margin: 80% }
+.m10p  { margin: 10% }
+.m20p  { margin: 20% }
+.m30p  { margin: 30% }
+.m40p  { margin: 40% }
+.m50p  { margin: 50% }
+.m60p  { margin: 60% }
+.m70p  { margin: 70% }
+.m80p  { margin: 80% }
 .m100p { margin: 100% }
 
 
-.p0 { padding: 0 }
-.p10 { padding: 10px }
-.p20 { padding: 20px }
-.p30 { padding: 30px }
-.p40 { padding: 40px }
-.p50 { padding: 50px }
-.p60 { padding: 60px }
-.p70 { padding: 70px }
-.p80 { padding: 80px }
-.p90 { padding: 90px }
-.p100 { padding: 100px }
+.p0    { padding: 0 }
+.p10   { padding: 10px }
+.p20   { padding: 20px }
+.p30   { padding: 30px }
+.p40   { padding: 40px }
+.p50   { padding: 50px }
+.p60   { padding: 60px }
+.p70   { padding: 70px }
+.p80   { padding: 80px }
+.p90   { padding: 90px }
+.p100  { padding: 100px }
 
-.p10p { padding: 10% }
-.p20p { padding: 20% }
-.p30p { padding: 30% }
-.p40p { padding: 40% }
-.p50p { padding: 50% }
-.p60p { padding: 60% }
-.p70p { padding: 70% }
-.p80p { padding: 80% }
+.p10p  { padding: 10% }
+.p20p  { padding: 20% }
+.p30p  { padding: 30% }
+.p40p  { padding: 40% }
+.p50p  { padding: 50% }
+.p60p  { padding: 60% }
+.p70p  { padding: 70% }
+.p80p  { padding: 80% }
 .p100p { padding: 100% }
 
 
 // Taille
-.w10p { width: 10% }
-.w20p { width: 20% }
-.w30p { width: 30% }
-.w40p { width: 40% }
-.w50p { width: 50% }
-.w60p { width: 60% }
-.w70p { width: 70% }
-.w80p { width: 80% }
+.w10p  { width: 10% }
+.w20p  { width: 20% }
+.w30p  { width: 30% }
+.w40p  { width: 40% }
+.w50p  { width: 50% }
+.w60p  { width: 60% }
+.w70p  { width: 70% }
+.w80p  { width: 80% }
 .w100p { width: 100% }
 
-.h10p { height: 10% }
-.h20p { height: 20% }
-.h30p { height: 30% }
-.h40p { height: 40% }
-.h50p { height: 50% }
-.h60p { height: 60% }
-.h70p { height: 70% }
-.h80p { height: 80% }
+.h10p  { height: 10% }
+.h20p  { height: 20% }
+.h30p  { height: 30% }
+.h40p  { height: 40% }
+.h50p  { height: 50% }
+.h60p  { height: 60% }
+.h70p  { height: 70% }
+.h80p  { height: 80% }
 .h100p { height: 100% }
 
 // Liste
@@ -179,7 +187,7 @@ ul.inline_list, ol.inline_list {
 // Couleurs
 .red { color: #D00 !important }
 
-// Utils
+// Border-box + Lissage police (OSX)
 *, *:after, *:before {
 	-moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;

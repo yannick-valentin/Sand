@@ -1,14 +1,15 @@
-/*----------------------------------------*/
-/* Les mixins                             */ 
-/*----------------------------------------*/
 
-// Converti les px en em
+//  MIXINS                             
+//  —————————————————————————————————————————————
+
+
+// Pxtoem
 .font-size( @value: @body_font_size, @context: @body_font_size ) {
 	font-size: (@value / @context) + 0em;
 }
 
 
-// box-shadow
+// Box-shadow
 .box-shadow (@arguments) {
 	-webkit-box-shadow: @arguments;
 	   -moz-box-shadow: @arguments;
@@ -22,6 +23,7 @@
 		     -o-box-shadow: none !important;
 		        box-shadow: none !important;
 	}
+
 
 // Text-shadow
 .text-shadow (@arguments) {
@@ -38,16 +40,17 @@
 		        text-shadow: none !important;
 	}
 
-// border-radius
-.rounded(@radius: 2px) {
+
+// Border-radius
+.border-radius(@radius: 2px) {
 	-webkit-border-radius: @radius;
 	   -moz-border-radius: @radius;
 	     -o-border-radius: @radius;
 	        border-radius: @radius;
- }
+}
 
 
-// opacity
+// Opacity
 .opacity(@alpha: 0.5) {
 	-webkit-opacity: @alpha;
 	 -khtml-opacity: @alpha;
@@ -56,6 +59,7 @@
 	@alphaie :@alpha * 100;
 	filter: ~"alpha(opacity = @{alphaie})";
 }
+
 
 // Transition
 .transition(@property:all, @duration:ease, @ease:200ms) {
@@ -71,3 +75,11 @@
 		     -o-transition: none !important;
 		        transition: none !important;
 	}
+
+
+// Rotate 
+.rotate(@angle) {
+	-webkit-transform: rotate(@angle);
+	    -ms-transform: rotate(@angle);
+	        transform: rotate(@angle);
+}
