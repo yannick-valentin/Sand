@@ -9,6 +9,26 @@
 }
 
 
+// Retina
+.retina-image(@file, @type, @width:100%, @height:100%, @posx:0, @posy:0, @repeat:no-repeat) {
+	background-image: url('@{file}.@{type}');
+	background-repeat: @repeat;
+	background-position: @posx @posy;
+
+	@media @retina {
+		background-size: @width @height;
+		background-image: url('@{file}@2x.@{type}');
+	}
+}
+
+
+// Pseudo element block
+.pseudo-block() {
+	content:" ";
+	display: block;
+}
+
+
 // Box-shadow
 .box-shadow (@arguments) {
 	-webkit-box-shadow: @arguments;

@@ -4,7 +4,7 @@
 
 
 // Variables utilisateur
-@images_directory_uri: 	'/images/';
+@images: 	'/images/';
 
 
 // Couleurs
@@ -18,10 +18,10 @@
 
 
 // Media queries breakpoint
-@x-small-screen: 		0px;   // < iPhone paysage
-@small-screen: 			320px; // < iPhone portrait
-@mid-small-screen: 		480px; // < iPad portrait
-@medium-screen: 		768px; // < iPad paysage / small desktop
+@x-small-screen: 		0px;    // < iPhone paysage
+@small-screen: 			320px;  // < iPhone portrait
+@mid-small-screen: 		480px;  // < iPad portrait
+@medium-screen: 		768px;  // < iPad paysage / small desktop
 @mid-medium-screen: 	1024px; // < desktop
 @large-screen: 			1280px; // < large desktop
 @x-large-screen: 		1350px; // < extra large desktop
@@ -38,7 +38,10 @@
 @portrait: 				~"only screen and (orientation: portrait)";
 
 
-@retina: 				~"only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (min-resolution: 200dpi)";
+@retina1: 				~"(-webkit-min-device-pixel-ratio: 1.25), (-o-min-device-pixel-ratio: 1.25/1), (min--moz-device-pixel-ratio: 1.25), (-moz-min-device-pixel-ratio: 1.25), ";
+@retina2: 				~"(-ms-min-device-pixel-ratio: 1.25), (min-device-pixel-ratio: 1.25), (min-resolution: 120dpi), (min-resolution: 1.25dppx)";
+@retina: 				~"@{retina1}@{retina2}";
+// @retina1 et @retina2 sont concatenées dans @retina (souci avec less.php qui doit trouver la chaine trop longue)
 
 
 // Body
