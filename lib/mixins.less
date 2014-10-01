@@ -3,13 +3,13 @@
 //  —————————————————————————————————————————————
 
 
-// Pxtoem
+//  PXTOEM
 .font-size( @value: @body_font_size, @context: @body_font_size ) {
 	font-size: (@value / @context) + 0em;
 }
 
 
-// Retina
+// RETINA
 .retina-image(@file, @type, @width:100%, @height:100%, @posx:0, @posy:0, @repeat:no-repeat) {
 	background-image: url('@{file}.@{type}');
 	background-repeat: @repeat;
@@ -22,84 +22,51 @@
 }
 
 
-// Pseudo element block
+//  PSEUDO ELEMENT BLOCK
 .pseudo-block() {
 	content:" ";
 	display: block;
 }
 
 
-// Box-shadow
+//  BOX-SHADOW
 .box-shadow (@arguments) {
 	-webkit-box-shadow: @arguments;
 	   -moz-box-shadow: @arguments;
-	     -o-box-shadow: @arguments;
 	        box-shadow: @arguments;
 }
 
-	.nobox-shadow() {
-		-webkit-box-shadow: none !important;
-		   -moz-box-shadow: none !important;
-		     -o-box-shadow: none !important;
-		        box-shadow: none !important;
-	}
 
-
-// Text-shadow
+//  TEXT-SHADOW
 .text-shadow (@arguments) {
-	-webkit-text-shadow: @arguments;
-	   -moz-text-shadow: @arguments;
-	     -o-text-shadow: @arguments;
-	        text-shadow: @arguments;
+	text-shadow: @arguments;
 }
 
-	.notext-shadow() {
-		-webkit-text-shadow: none !important;
-		   -moz-text-shadow: none !important;
-		     -o-text-shadow: none !important;
-		        text-shadow: none !important;
-	}
 
-
-// Border-radius
+//  BORDER-RADIUS
 .border-radius(@radius: 2px) {
 	-webkit-border-radius: @radius;
 	   -moz-border-radius: @radius;
-	     -o-border-radius: @radius;
 	        border-radius: @radius;
 }
 
 
-// Opacity
-.opacity(@alpha: 0.5) {
-	-webkit-opacity: @alpha;
-	 -khtml-opacity: @alpha;
-	   -moz-opacity: @alpha;
-	        opacity: @alpha;
-	@alphaie :@alpha * 100;
-	filter: ~"alpha(opacity = @{alphaie})";
-}
-
-
-// Transition
+//  TRANSITION
 .transition(@property:all, @duration:ease, @ease:200ms) {
 	-webkit-transition: @property @duration @ease;
-	   -moz-transition: @property @duration @ease;
-	     -o-transition: @property @duration @ease;
 	        transition: @property @duration @ease;
 }
 
-	.notransition() {
-		-webkit-transition: none !important;
-		   -moz-transition: none !important;
-		     -o-transition: none !important;
-		        transition: none !important;
-	}
+
+//  ACCELERATION
+.acceleration {
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+}
 
 
-// Rotate 
+//  ROTATE 
 .rotate(@angle) {
 	-webkit-transform: rotate(@angle);
-	    -ms-transform: rotate(@angle);
 	        transform: rotate(@angle);
 }

@@ -1,38 +1,30 @@
 
-//  SAND v1.1                             
+//  SAND v1.2                       
 //  —————————————————————————————————————————————
-/*  
-    SAND.LESS
-    Ce fichier appelle tous les autres
-
-	lib /
-		— classes.less
-		— mixins.less
-		— normalize.less
-		— the-grid.less
-
-	style / 
-		utils / 
-			— print.less			
-		— base.less
-
-	— config.less
-	— sand.less
-*/
+// 
+//   SAND.LESS
+//   Ce fichier appelle tous les autres
+//
 //  —————————————————————————————————————————————
 
 // Config
-@import 'config.less';
+@import 'config.less'; // Config
 
-// Lib
-@import 'lib/normalize.less'; // Reset
-@import 'lib/mixins.less'; // Mixins
-@import 'lib/classes.less'; // Classes
+// Base
+@import 'base/normalize.less'; // Reset
+@import 'base/typo.less';      // Typo
+@import 'base/medias.less';    // Medias
+
+// Tools
+@import 'lib/mixins.less';   // Mixins
+@import 'lib/classes.less';  // Classes
 @import 'lib/the-grid.less'; // Grille
 
-// Style utilisateur
-@import 'style/base.less';
-@import 'style/modules/header.less';
+// Layout
+@import 'layout/body.less';
 
-// Print
-@import 'style/utils/print.less';
+// Components
+@import 'components/header.less';
+
+// Utils
+@import 'utils/print.less';
