@@ -1,0 +1,82 @@
+
+//  FORMS
+//  —————————————————————————————————————————————
+
+
+form {
+}
+
+
+//  LABELS
+label {
+	font-size: 1em;
+	display: block;
+	text-align: left;
+	vertical-align: middle;
+	margin-bottom: 2px;
+}
+
+
+//  INPUTS
+input {
+	display: block;
+	margin: 0;
+	font-weight: normal;
+}
+
+input[type=number] { -webkit-appaerance:none }
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea {
+	font-size: 1em;
+	display: block;
+	border: 1px solid #DDD;
+	background: #FFFFFF;
+	height: 40px;
+	padding: 0 7px;
+	-webkit-appearance: none;
+    border-radius: 0;
+}
+
+textarea {
+	height: 100px;
+	padding: 7px;
+	resize: vertical;
+}
+
+
+//  SELECTS
+select {
+	display: block;
+	height: 40px;
+	border: 1px solid #CCC;
+}
+
+//  SUBMIT, BUTTONS
+input[type=submit],
+button {
+	display: inline-block;
+
+	color: #FFFFFF;
+	background: @color;
+	.font-size(20);
+	padding: 8px 20px 4px;
+	line-height: normal;
+
+	border: none;
+
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	-webkit-appearance: none;
+    border-radius: 0;
+
+	.transition;
+
+    &:hover { background: lighten(@color, 10%) }
+}
