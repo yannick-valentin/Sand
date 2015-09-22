@@ -3,30 +3,10 @@
 //  ---------------------------------------------
 
 //  ACCESSIBILITE
-.screen-reader-text {
+.screen-reader-text,
+.element-invisible {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
-}
-
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000;
 }
 
 
@@ -37,18 +17,23 @@
 
 
 //  MICRO-CLEARFIX  -  © http://nicolasgallagher.com/micro-clearfix-hack/
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
+.cf,
+.clearfix {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after { clear: both }
 }
-.cf:after { clear: both }
 
 
 //  ALIGNEMENT
 .alignLeft   { text-align: left }
 .alignCenter { text-align: center }
 .alignRight  { text-align: right }
+
+.alignMiddle   { vertical-align: middle }
 
 
 //  TEXT-TRANSFORM
@@ -57,7 +42,7 @@
 
 
 //  TAILLE DE TEXTE
-/* .fz5  { .font-size(5) }
+.fz5  { .font-size(5) }
 .fz6  { .font-size(6) }
 .fz7  { .font-size(7) }
 .fz8  { .font-size(8) }
@@ -87,7 +72,12 @@
 .fz32 { .font-size(32) }
 .fz33 { .font-size(33) }
 .fz34 { .font-size(34) }
-.fz35 { .font-size(35) } */
+.fz35 { .font-size(35) }
+
+.light   { font-weight: 300 }
+.regular { font-weight: 400 }
+.medium  { font-weight: 600 }
+.bold    { font-weight: 700 }
 
 
 //  DISPLAY
@@ -156,6 +146,9 @@
 .p80p  { padding: 80% }
 .p100p { padding: 100% }
 
+.m0important { margin:  0 !important }
+.p0important { padding: 0 !important }
+
 
 //  TAILLE
 .w10p  { width: 10% }
@@ -177,6 +170,8 @@
 .h70p  { height: 70% }
 .h80p  { height: 80% }
 .h100p { height: 100% }
+
+.minHeight200 { min-height: 200px }
 
 
 //  Z-INDEX
@@ -204,23 +199,23 @@
 
 
 //  LISTE
-ul.inlineList, ol.inlineList {
+.list_inline, ul.list_inline, ol.list_inline {
 	margin-left: 0;
 
 	li { display: inline-block }
 }
 
+.list_nostyle, ul.list_nostyle, ol.list_nostyle {
+	list-style: none;
+
+	&, li {
+		padding: 0;
+		margin: 0;
+
+		&:before { display: none; content:" "}
+	}
+}
+
 
 //  COULEURS
 .red { color: #D00 !important }
-
-
-//  BORDER-BOX + LISSAGE POLICE (OSX)
-*, *:after, *:before {
-    -webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-            box-sizing: border-box;
-
-    -webkit-font-smoothing:antialiased;
-            font-smoothing:antialiased;
-}

@@ -2,33 +2,68 @@
 //  IMAGES                             
 //  ---------------------------------------------
 
-img, table, td, blockquote, code, pre, textarea, input, video, figcaption {
+img, video {
 	max-width: 100%;
+	height: auto !important;
 }
 
-img, figcaption {
+img, iframe {
 	border: none;
-	margin: 0 @images_margin @images_margin;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+
+	&.img_left,
+	&.img_center,
+	&.img_right {
+		display: block; 
+		float: none;	
+		margin: @images_margin auto @images_margin;
+	}
 }
 
-img.fleft, figcaption.fleft {margin: 0 @images_margin @images_margin 0}
-img.fright, figcaption.fright {margin: 0 0 @images_margin @images_margin}
+@media @mid-small {
+	img, iframe {
+		display: inline-block;
+
+		&.img_left   { float: left;     margin: 0 @images_margin @images_margin 0 }
+		&.img_center { display: block;  margin: 0 auto @images_margin; clear: both; }
+		&.img_right  { float: right;    margin: 0 0 @images_margin @images_margin }
+	}
+}
+
+.file-icon { display: none !important }
 
 
 //  VIDEO 
 //  ---------------------------------------------
+
+.media_embed {
+	display: inline-block;
+}
+
+@iframe_margin: 0 0 1em;
+
+iframe {
+	border: 0;
+	max-width: 100%;
+	margin: @iframe_margin;
+}
 
 .responsiveVideo {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
+	margin: @iframe_margin;
 
 	iframe {
 		position: absolute;
+		float: none;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
+		margin: 0;
 	}
 }

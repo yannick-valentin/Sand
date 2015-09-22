@@ -1,0 +1,25 @@
+
+//  MESSAGES                             
+//  ---------------------------------------------
+
+.messages {
+	background-repeat: no-repeat;
+	border: 1px solid @borders;
+	margin: 0 0 2em;
+	padding: 15px;
+	color: #333333;
+
+	ul {
+		.list_nostyle;
+
+		li:last-child { padding-bottom: 0 }
+	}
+}
+
+.status,
+.ok 	 { background-color: #DFF0D8 !important;	border-color: darken(#DFF0D8, 10%) !important }
+.warning { background-color: #FFF8D3 !important;	border-color: darken(#FFF8D3, 10%) !important }
+.error 	 { background-color: #F2DEDE !important;	border-color: darken(#F2DEDE, 10%) !important }
+
+@media @medium {
+}
